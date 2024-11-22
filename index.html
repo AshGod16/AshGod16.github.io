@@ -1,1 +1,239 @@
-"Hello World"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Godbole - Computer Vision Specialist</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --background-color: #f5f6fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 40px 0;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .education-item, .publication-item, .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--accent-color);
+            background-color: #f8f9fa;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .skill-category {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 40px;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Akash Godbole</h1>
+            <h2>Computer Vision Specialist</h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <p>I am a recently graduated Master's student advised by Dr. Anil Kumar Jain in the Computer Science program at Michigan State University. My research interests include machine learning, biometrics, computer vision and natural language processing.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master of Science (MS) in Computer Science</h3>
+                <p>Michigan State University</p>
+                <p>Expected Graduation: May 2024</p>
+                <p>Advisor: Dr. Anil Kumar Jain</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Science (BS) in Computer Science</h3>
+                <p>Michigan State University</p>
+                <p>Graduated with honors: May 2021</p>
+                <p>GPA: 3.9</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <div class="publication-item">
+                <p>S. A. Grosz, A. Godbole, and A. K. Jain. "Mobile Contactless Palmprint Recognition: Use of Multiscale, Multimodel, Embeddings", IEEE Transanctions on Information Forensics and Security (TIFS), 2024.</p>
+            </div>
+            <div class="publication-item">
+                <p>A. Godbole, S.A. Grosz, and A. K. Jain. "Contactless Palmprint Recognition for Children", IEEE International Conference of the Biometrics Special Interest Group (BIOSIG), 2023.</p>
+            </div>
+            <div class="publication-item">
+                <p>A. Godbole, S. A. Grosz, K. Nandakumar, and A. K. Jain. "On Demographic Bias in Fingerprint Recognition", International Joint Conference on Biometrics, 2022.</p>
+            </div>
+            <div class="publication-item">
+                <p>A. Godbole, K. Nandakumar, and A. K. Jain. "Learning an Ensemble of Deep Fingerprint Representations", 2022.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Graduate Research Assistant</h3>
+                <p>Michigan State University (Aug 2021 - Present)</p>
+                <p>Advised by Dr. Anil Kumar Jain, conducting research in Biometrics, Pattern Recognition, Machine Learning, and Computer Vision.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Graduate Teaching Assistant</h3>
+                <p>Michigan State University (Jan 2024 - Present)</p>
+                <p>Assistant to Prof. Mark McCullen in Computer Systems (CSE 325)</p>
+            </div>
+            <div class="experience-item">
+                <h3>Undergraduate Teaching Assistant</h3>
+                <p>Michigan State University (2019)</p>
+                <p>Assistant to Prof. Richard Enbody in introductory computer programming (CSE 231)</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Voice Assistant</h3>
+                    <p>A simple voice assistant built using open source NLP libraries. Can fetch YouTube videos, announce weather and stock market news.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Blob Detection on Cellular Images</h3>
+                    <p>Detection of cell abnormalities based on discriminative characteristics such as size and color.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Lidar-Camera Extrinsic Calibration</h3>
+                    <p>Establish universal coordinate system and perform extrinsic calibration for autonomous vehicle sensors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Matlab</li>
+                        <li>JavaScript</li>
+                        <li>Tensorflow</li>
+                        <li>Pytorch</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Professional Skills</h3>
+                    <ul>
+                        <li>Public speaking</li>
+                        <li>Mentoring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <p>East Lansing, Michigan, USA</p>
+            <p>Email: <a href="mailto:godbole1@msu.edu">godbole1@msu.edu</a> | <a href="mailto:akash.godbole16@gmail.com">akash.godbole16@gmail.com</a></p>
+        </div>
+    </section>
+</body>
+</html>
