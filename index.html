@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akash Godbole - Computer Vision Specialist</title>
+    <title>Akash Godbole - Machine Learning Specialist</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Forum&display=swap">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
+            --primary-color: #10352e;
+            --secondary-color: #52a697;
+            --accent-color: #1f5147;
             --text-color: #2c3e50;
             --background-color: #f5f6fa;
         }
@@ -20,7 +21,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            font-family: 'Forum', serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
@@ -41,12 +42,13 @@
 
         .intro {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
+            font-size: x-large;
         }
 
         section {
-            padding: 40px 0;
+            padding: 40px;
             background-color: white;
             margin: 20px 0;
             border-radius: 8px;
@@ -56,13 +58,14 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-        }
-
-        h2 {
-            color: var(--secondary-color);
+            color: white;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-card{
+            background-color: #10352e;
         }
 
         .education-item, .publication-item, .experience-item {
@@ -70,6 +73,8 @@
             padding: 15px;
             border-left: 3px solid var(--accent-color);
             background-color: #f8f9fa;
+            font-size: larger;
+            border-radius: 8px;
         }
 
         .project-grid {
@@ -119,39 +124,76 @@
         .contact a:hover {
             text-decoration: underline;
         }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Akash Godbole</h1>
-            <h2>Computer Vision Specialist</h2>
+        <div class="header-content">
+            <img src="/Users/akashgodbole/Desktop/Akash/Projects/AshGod16.github.io/profile_pic.jpg" alt="Profile Picture" class="profile-image">
+            <div class="header-text">
+                <h1>Akash Godbole</h1>
+                <h2>Machine Learning Specialist</h2>
+            </div>
         </div>
     </header>
 
     <div class="container">
         <section class="intro">
-            <p>I am a recently graduated Master's student advised by Dr. Anil Kumar Jain in the Computer Science program at Michigan State University. My research interests include machine learning, biometrics, computer vision and natural language processing.</p>
+            <p>A Machine Learning Engineer specializing in biometric recognition and real-time AI systems. Currently leading patent-pending biometric technology development, engineering systems that handle 100,000 users with 99.9% accuracy. My research at Michigan State University, published in IEEE Transactions, advanced mobile palmprint recognition to commercial readiness. I thrive on building scalable AI solutions that bridge cutting-edge research with real-world applications.</p>
         </section>
 
-        <section>
-            <h2>Education</h2>
+        <section class="section-card">
+            <h1>Education</h1>
             <div class="education-item">
                 <h3>Master of Science (MS) in Computer Science</h3>
+                <hr>
                 <p>Michigan State University</p>
                 <p>Expected Graduation: May 2024</p>
                 <p>Advisor: Dr. Anil Kumar Jain</p>
             </div>
             <div class="education-item">
                 <h3>Bachelor of Science (BS) in Computer Science</h3>
+                <hr>
                 <p>Michigan State University</p>
                 <p>Graduated with honors: May 2021</p>
                 <p>GPA: 3.9</p>
             </div>
         </section>
 
-        <section>
-            <h2>Publications</h2>
+        <section class="section-card">
+            <h1>Publications</h1>
             <div class="publication-item">
                 <p>S. A. Grosz, A. Godbole, and A. K. Jain. "Mobile Contactless Palmprint Recognition: Use of Multiscale, Multimodel, Embeddings", IEEE Transanctions on Information Forensics and Security (TIFS), 2024.</p>
             </div>
@@ -166,48 +208,48 @@
             </div>
         </section>
 
-        <section>
-            <h2>Experience</h2>
+        <section class="section-card">
+            <h1>Experience</h1>
             <div class="experience-item">
-                <h3>Graduate Research Assistant</h3>
+                <h2>Graduate Research Assistant</h2>
                 <p>Michigan State University (Aug 2021 - Present)</p>
                 <p>Advised by Dr. Anil Kumar Jain, conducting research in Biometrics, Pattern Recognition, Machine Learning, and Computer Vision.</p>
             </div>
             <div class="experience-item">
-                <h3>Graduate Teaching Assistant</h3>
+                <h2>Graduate Teaching Assistant</h2>
                 <p>Michigan State University (Jan 2024 - Present)</p>
                 <p>Assistant to Prof. Mark McCullen in Computer Systems (CSE 325)</p>
             </div>
             <div class="experience-item">
-                <h3>Undergraduate Teaching Assistant</h3>
+                <h2>Undergraduate Teaching Assistant</h2>
                 <p>Michigan State University (2019)</p>
                 <p>Assistant to Prof. Richard Enbody in introductory computer programming (CSE 231)</p>
             </div>
         </section>
 
-        <section>
-            <h2>Projects</h2>
+        <section class="section-card">
+            <h1>Projects</h1>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Voice Assistant</h3>
+                    <h2>Voice Assistant</h2>
                     <p>A simple voice assistant built using open source NLP libraries. Can fetch YouTube videos, announce weather and stock market news.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Blob Detection on Cellular Images</h3>
+                    <h2>Blob Detection on Cellular Images</h2>
                     <p>Detection of cell abnormalities based on discriminative characteristics such as size and color.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Lidar-Camera Extrinsic Calibration</h3>
+                    <h2>Lidar-Camera Extrinsic Calibration</h2>
                     <p>Establish universal coordinate system and perform extrinsic calibration for autonomous vehicle sensors.</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Skills</h2>
+        <section class="section-card">
+            <h1>Skills</h1>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Technical Skills</h3>
+                    <h2>Technical Skills</h2>
                     <ul>
                         <li>Python</li>
                         <li>C++</li>
@@ -218,7 +260,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Professional Skills</h3>
+                    <h2>Professional Skills</h2>
                     <ul>
                         <li>Public speaking</li>
                         <li>Mentoring</li>
