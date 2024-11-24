@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash Godbole - Machine Learning Specialist</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Forum&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #10352e;
@@ -95,19 +96,6 @@
             transform: translateY(-5px);
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .skill-category {
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-        }
-
         .contact {
             text-align: center;
             padding: 40px 0;
@@ -156,12 +144,114 @@
                 text-align: center;
             }
         }
+
+        .skills-container {
+            padding: 20px;
+        }
+
+        .skills-category {
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            padding: 20px 0;
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s;
+            width: 100%;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .skill-icon i {
+            font-size: 2em;
+            color: var(--accent-color);
+        }
+
+        .skill-name {
+            font-size: 0.9em;
+            margin-top: 8px;
+            color: var(--text-color);
+        }
+
+        .category-title {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-link {
+            color: white;
+            font-size: 2rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .linkedin:hover {
+            color: #0077b5;
+        }
+
+        .github:hover {
+            color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="profile_pic.jpg" alt="Profile Picture" class="profile-image">
+            <div class="profile-section">
+                <img src="profile_pic.jpg" alt="Profile Picture" class="profile-image">
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/akashgodbole" target="_blank" class="social-link linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/AshGod16" target="_blank" class="social-link github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
             <div class="header-text">
                 <h1>Akash Godbole</h1>
                 <h2>Machine Learning Specialist</h2>
@@ -175,55 +265,56 @@
         </section>
 
         <section class="section-card">
-            <h1>Education</h1>
-            <div class="education-item">
-                <h3>Master of Science (MS) in Computer Science</h3>
-                <hr>
-                <p>Michigan State University</p>
-                <p>Expected Graduation: May 2024</p>
-                <p>Advisor: Dr. Anil Kumar Jain</p>
+            <h1>Experience</h1>
+            <div class="experience-item">
+                <h2>Machine Learning Engineer</h2>
+                <p><i>@ <a href="https://five.id">Five ID (July 2024 - Present)</a></i></p>
+                <p>Leading research in contactless biometric recognition algorithms, achieving benchmark performance in palmprint identification</p>
             </div>
-            <div class="education-item">
-                <h3>Bachelor of Science (BS) in Computer Science</h3>
-                <hr>
-                <p>Michigan State University</p>
-                <p>Graduated with honors: May 2021</p>
-                <p>GPA: 3.9</p>
+            <div class="experience-item">
+                <h2>Graduate Research Assistant</h2>
+                <p> <i>@ Michigan State University (Aug 2021 - May 2024)</i></p>
+                <p> Published 4 papers on Biometric Recognition in IEEE TIFS and international conferences, advancing research in palmprint and fingerprint recognition</p>
+            </div>
+            <div class="experience-item">
+                <h2>Graduate Teaching Assistant</h2>
+                <p> <i>@ Michigan State University (Jan 2024 - May 2024)</i></p>
+                <p>Led and mentored 35 MBA students in mastering Business Analytics and Data Science fundamentals</p>
+            </div>
+            <div class="experience-item">
+                <h2>Software Engineering Intern</h2>
+                <p> <i>@ Technomentum (May 2020 - July 2020)</i></p>
+                <p>Designed a full-stack application to automate tax withholdings across 50 states, abstracting complex taxation laws </p>
             </div>
         </section>
 
         <section class="section-card">
             <h1>Publications</h1>
             <div class="publication-item">
-                <p>S. A. Grosz, A. Godbole, and A. K. Jain. "Mobile Contactless Palmprint Recognition: Use of Multiscale, Multimodel, Embeddings", IEEE Transanctions on Information Forensics and Security (TIFS), 2024.</p>
+                <p>S. A. Grosz, <strong><em>A. Godbole</em></strong>, and A. K. Jain. "Mobile Contactless Palmprint Recognition: Use of Multiscale, Multimodel, Embeddings", IEEE Transanctions on Information Forensics and Security (TIFS), 2024.</p>
             </div>
             <div class="publication-item">
-                <p>A. Godbole, S.A. Grosz, and A. K. Jain. "Contactless Palmprint Recognition for Children", IEEE International Conference of the Biometrics Special Interest Group (BIOSIG), 2023.</p>
+                <p><strong><em>A. Godbole</em></strong>, S.A. Grosz, and A. K. Jain. "Contactless Palmprint Recognition for Children", IEEE International Conference of the Biometrics Special Interest Group (BIOSIG), 2023.</p>
             </div>
             <div class="publication-item">
-                <p>A. Godbole, S. A. Grosz, K. Nandakumar, and A. K. Jain. "On Demographic Bias in Fingerprint Recognition", International Joint Conference on Biometrics, 2022.</p>
+                <p><strong><em>A. Godbole</em></strong>, S. A. Grosz, K. Nandakumar, and A. K. Jain. "On Demographic Bias in Fingerprint Recognition", International Joint Conference on Biometrics, 2022.</p>
             </div>
             <div class="publication-item">
-                <p>A. Godbole, K. Nandakumar, and A. K. Jain. "Learning an Ensemble of Deep Fingerprint Representations", 2022.</p>
+                <p><strong><em>A. Godbole</em></strong>, K. Nandakumar, and A. K. Jain. "Learning an Ensemble of Deep Fingerprint Representations", 2022.</p>
             </div>
         </section>
 
         <section class="section-card">
-            <h1>Experience</h1>
-            <div class="experience-item">
-                <h2>Graduate Research Assistant</h2>
-                <p>Michigan State University (Aug 2021 - Present)</p>
-                <p>Advised by Dr. Anil Kumar Jain, conducting research in Biometrics, Pattern Recognition, Machine Learning, and Computer Vision.</p>
+            <h1>Education</h1>
+            <div class="education-item">
+                <h3>Master of Science (MS) in Computer Science</h3>
+                <hr>
+                <p>Michigan State University</p>
             </div>
-            <div class="experience-item">
-                <h2>Graduate Teaching Assistant</h2>
-                <p>Michigan State University (Jan 2024 - Present)</p>
-                <p>Assistant to Prof. Mark McCullen in Computer Systems (CSE 325)</p>
-            </div>
-            <div class="experience-item">
-                <h2>Undergraduate Teaching Assistant</h2>
-                <p>Michigan State University (2019)</p>
-                <p>Assistant to Prof. Richard Enbody in introductory computer programming (CSE 231)</p>
+            <div class="education-item">
+                <h3>Bachelor of Science (BS) in Computer Science</h3>
+                <hr>
+                <p>Michigan State University</p>
             </div>
         </section>
 
@@ -246,25 +337,156 @@
         </section>
 
         <section class="section-card">
-            <h1>Skills</h1>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h2>Technical Skills</h2>
-                    <ul>
-                        <li>Python</li>
-                        <li>C++</li>
-                        <li>Matlab</li>
-                        <li>JavaScript</li>
-                        <li>Tensorflow</li>
-                        <li>Pytorch</li>
-                    </ul>
+            <h1>Skills & Expertise</h1>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="category-title">Programming Languages & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                            </div>
+                            <span class="skill-name">C/C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+                            </div>
+                            <span class="skill-name">Node JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS"/>
+                            </div>
+                            <span class="skill-name">AWS</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h2>Professional Skills</h2>
-                    <ul>
-                        <li>Public speaking</li>
-                        <li>Mentoring</li>
-                    </ul>
+    
+                <div class="skills-category">
+                    <h3 class="category-title">Machine Learning Tools and Frameworks</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch">
+                            </div>
+                            <span class="skill-name">PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                            </div>
+                            <span class="skill-name">TensorFlow</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
+                            </div>
+                            <span class="skill-name">Scikit-Learn</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original-wordmark.svg" />
+                            </div>
+                            <span class="skill-name">Keras</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="skills-category">
+                    <h3 class="category-title">Applied AI Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <span class="skill-name">Computer Vision</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <span class="skill-name">Biometrics</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <span class="skill-name">Image Processing</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <span class="skill-name">Natural Language Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Database Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="SQL">
+                            </div>
+                            <span class="skill-name">SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="NoSQL">
+                            </div>
+                            <span class="skill-name">NoSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL">
+                            </div>
+                            <span class="skill-name">GraphQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            </div>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="skills-category">
+                    <h3 class="category-title">Research & Management</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <span class="skill-name">Project Management</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span class="skill-name">Data Interpretation</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <span class="skill-name">Quantitative Research</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
