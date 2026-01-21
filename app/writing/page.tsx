@@ -7,24 +7,6 @@ export default function WritingPage() {
             date: "January 2026",
             description: "Constraints breed resourcefulness. Why limiting your options is the best way to move fast.",
             slug: "https://medium.com/@akash.godbole16/why-the-best-startup-founders-intentionally-curb-their-creativity-7e4ac338b70a"
-        },
-        {
-            title: "What Surprised Me Building Production ML Systems",
-            date: "October 2025",
-            description: "Real-world lessons from scaling biometric systems to 100k users.",
-            slug: "#"
-        },
-        {
-            title: "Why Most Machine Learning Systems Fail Quietly",
-            date: "August 2025",
-            description: "The silent errors that monitoring tools often miss.",
-            slug: "#"
-        },
-        {
-            title: "What Engineers Miss When They Become Founders",
-            date: "June 2025",
-            description: "Technical debt is easy; product debt is fatal.",
-            slug: "#"
         }
     ];
 
