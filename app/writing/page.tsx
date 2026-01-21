@@ -3,6 +3,12 @@ import Link from "next/link";
 export default function WritingPage() {
     const essays = [
         {
+            title: "Why The Best Startup Founders Intentionally Curb Their Creativity",
+            date: "January 2026",
+            description: "Constraints breed resourcefulness. Why limiting your options is the best way to move fast.",
+            slug: "https://medium.com/@akash.godbole16/why-the-best-startup-founders-intentionally-curb-their-creativity-7e4ac338b70a"
+        },
+        {
             title: "What Surprised Me Building Production ML Systems",
             date: "October 2025",
             description: "Real-world lessons from scaling biometric systems to 100k users.",
@@ -34,7 +40,7 @@ export default function WritingPage() {
             <div className="space-y-12">
                 {essays.map((essay, index) => (
                     <article key={index} className="group cursor-pointer">
-                        <Link href={essay.slug} className="block">
+                        <Link href={essay.slug} className="block" target={essay.slug.startsWith("http") ? "_blank" : "_self"} rel={essay.slug.startsWith("http") ? "noopener noreferrer" : undefined}>
                             <h2 className="text-2xl font-semibold mb-2 group-hover:underline decoration-1 underline-offset-4">
                                 {essay.title}
                             </h2>
