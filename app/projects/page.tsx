@@ -1,64 +1,26 @@
-import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects", description: "LxOS and other projects by Akash Godbole.", alternates: { canonical: "/projects" },
+};
+
+const projects = [
+  { name: "LxOS", href: "https://lxos.ai", description: "I’m building end-to-end, AI-native legal software for small and midsize law firms, with the goal of helping them do more legal work with the same team." },
+  { name: "Resume Analyzer", href: "https://github.com/AshGod16/resume_analyzer", description: "A resume analysis tool built with Gemini." },
+  { name: "Voice Assistant", href: "https://github.com/AshGod16/voice-assistant", description: "A small voice assistant using open-source natural language tools." },
+  { name: "Assembly Line Analytics", href: "https://github.com/AshGod16/predictive-maintenance", description: "A dashboard for exploring production trends and predicting equipment failures using simulated data." },
+  { name: "Weather", href: "https://github.com/AshGod16/weather-app", description: "A weather app built with React and OpenWeather." },
+];
 
 export default function ProjectsPage() {
-    const projects = [
-        {
-            title: "Biometric Authentication at Scale",
-            problem: "Existing solutions failed in low-connectivity environments with variable lighting.",
-            impact: "Built a system serving 100,000+ users with 99.9% accuracy.",
-            learned: "Latency matters more than model size; optimized on-device inference to <100ms.",
-            tech: ["Python", "TensorFlow", "Edge Computing"]
-        },
-        {
-            title: "Automated Data Pipeline Orchestrator",
-            problem: "Manual data cleaning was consuming 40% of engineering time.",
-            impact: "Reduced data prep time by 90% and eliminated human-error injection.",
-            learned: "Idempotency is the most critical feature of data pipelines.",
-            tech: ["Apache Airflow", "Docker", "AWS"]
-        }
-    ];
-
-    return (
-        <main className="container mx-auto px-4 py-16 max-w-2xl">
-            <header className="mb-16">
-                <h1 className="text-4xl font-bold mb-4">Projects</h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                    Selected work focusing on real-world constraints and engineering trade-offs.
-                </p>
-            </header>
-
-            <div className="space-y-16">
-                {projects.map((project, index) => (
-                    <section key={index} className="border-l-2 border-muted pl-6">
-                        <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-1">The Problem</h3>
-                                <p className="leading-relaxed">{project.problem}</p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-1">Why It Mattered</h3>
-                                <p className="leading-relaxed">{project.impact}</p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-1">Technical Insight</h3>
-                                <p className="leading-relaxed">{project.learned}</p>
-                            </div>
-
-                            <div className="flex gap-2">
-                                {project.tech.map((t) => (
-                                    <Badge key={t} variant="secondary" className="font-normal">
-                                        {t}
-                                    </Badge>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                ))}
-            </div>
-        </main>
-    );
+  return (
+    <main id="main">
+      <header className="page-heading"><h1>Projects</h1><p className="muted">What I’m building, and a few earlier projects.</p></header>
+      <ul className="project-list">
+        {projects.map((project) => <li key={project.href}><h2><a href={project.href}>{project.name} <ArrowUpRight className="link-icon" aria-hidden="true" /></a></h2><p className="muted">{project.description}</p></li>)}
+      </ul>
+      <p className="end-note">More on <a href="https://github.com/AshGod16">GitHub</a>.</p>
+    </main>
+  );
 }

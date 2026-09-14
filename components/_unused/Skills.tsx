@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Eye, Fingerprint, Image as ImageIcon, Languages, ClipboardList, TrendingUp, FlaskConical } from "lucide-react";
 
 /* eslint-disable @next/next/no-img-element */

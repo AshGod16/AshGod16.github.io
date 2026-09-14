@@ -1,45 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Forum } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const forum = Forum({
-  weight: "400",
-  variable: "--font-forum",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Akash Godbole | Machine Learning Engineer",
-  description: "Building and thinking about AI systems that work in the real world.",
+  metadataBase: new URL("https://akashgodbole.com"),
+  title: { default: "Akash Godbole", template: "%s · Akash Godbole" },
+  description: "Akash Godbole is building LxOS, AI-native legal software for small and midsize law firms. Writing on entrepreneurship and engineering.",
+  alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
+  openGraph: { type: "website", siteName: "Akash Godbole", title: "Akash Godbole", description: "Building LxOS, AI-native legal software for small and midsize law firms. Writing on entrepreneurship and engineering." },
+  twitter: { card: "summary" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${forum.variable} antialiased font-serif flex flex-col min-h-screen`}
-      >
-        <Header />
-        <div className="flex-1">
+      <body>
+        <a className="skip-link" href="#main">Skip to content</a>
+        <div className="site-shell">
+          <Header />
           {children}
+          <Footer />
         </div>
-        <Footer />
       </body>
     </html>
   );
