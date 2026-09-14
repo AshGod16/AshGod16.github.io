@@ -45,7 +45,7 @@ export const Publications = () => {
                         <Card key={index} className="border-l-4 border-l-accent border-y-0 border-r-0 rounded-none bg-secondary/30">
                             <CardContent className="pt-6">
                                 <p className="text-lg leading-relaxed font-serif text-gray-800">
-                                    {formatAuthors(pub.authors)}. "{pub.title}", {pub.venue}.
+                                    {formatAuthors(pub.authors)}. &quot;{pub.title}&quot;, {pub.venue}.
                                 </p>
                             </CardContent>
                         </Card>

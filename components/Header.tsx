@@ -1,27 +1,24 @@
-import Link from "next/link";
+"use client";
 
-export const Header = () => {
-    return (
-        <header className="py-8">
-            <div className="container mx-auto px-4 flex justify-between items-center">
-                <Link href="/" className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-                    Akash Godbole
-                </Link>
-                <nav className="flex gap-6">
-                    <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                        Home
-                    </Link>
-                    <Link href="/writing" className="text-muted-foreground hover:text-primary transition-colors">
-                        Writing
-                    </Link>
-                    <Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-                        Projects
-                    </Link>
-                    <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                        About
-                    </Link>
-                </nav>
-            </div>
-        </header>
-    );
-};
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const links = [
+  { href: "/writing", label: "Writing" },
+  { href: "/projects", label: "Projects" },
+  { href: "/about", label: "About" },
+];
+
+export function Header() {
+  const pathname = usePathname();
+  return (
+    <header className="site-header">
+      <Link href="/" className="site-name" aria-current={pathname === "/" ? "page" : undefined}>Akash Godbole</Link>
+      <nav aria-label="Main navigation">
+        {links.map(({ href, label }) => (
+          <Link key={href} href={href} aria-current={pathname === href || pathname.startsWith(`${href}/`) ? "page" : undefined}>{label}</Link>
+        ))}
+      </nav>
+    </header>
+  );
+}
